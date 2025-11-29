@@ -2,6 +2,10 @@
 
 A full-stack web application that automatically generates a change-history audit trail every time text is modified. Built with Next.js, TypeScript, and Tailwind CSS.
 
+## 🌐 Live Demo
+
+**Live Application**: [https://ai-certs-blond.vercel.app/](https://ai-certs-blond.vercel.app/)
+
 ## 🚀 How to Run
 
 ```bash
@@ -144,6 +148,10 @@ Retrieves all version history entries.
 ```
 
 ## 🚢 Deployment
+
+### Live Application
+
+**Deployed on Vercel**: [https://ai-certs-blond.vercel.app/](https://ai-certs-blond.vercel.app/)
 
 ### Vercel (Recommended)
 
