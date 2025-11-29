@@ -6,6 +6,10 @@
 import { NextResponse } from 'next/server';
 import { readVersions } from '@/lib/storage';
 
+// Configure runtime for Vercel
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const versions = readVersions();

@@ -39,6 +39,10 @@ export default function Home() {
   const fetchVersions = async () => {
     try {
       const response = await fetch('/api/versions');
+      if (!response.ok) {
+        console.error('Failed to fetch versions:', response.status, response.statusText);
+        return;
+      }
       const data = await response.json();
       if (data.success) {
         setVersions(data.versions);
@@ -67,6 +71,13 @@ export default function Home() {
         },
         body: JSON.stringify({ text: currentText }),
       });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Failed to save version:', response.status, response.statusText, errorText);
+        alert(`Error saving version: ${response.status} ${response.statusText}`);
+        return;
+      }
 
       const data = await response.json();
       if (data.success) {
